@@ -40,6 +40,22 @@
     
 
     <script type="text/javascript" language="javascript" src="/ngScripts/apiServices.js"></script>
+    <script>
+        var din="06458613";
+        $.ajax({
+            type: "post",
+            url: "http://www.mca.gov.in/mcafoportal/showdirectorMasterData.do",
+            data: din,
+            contentType: "application/x-www-form-urlencoded",
+            'Access-Control-Allow-Origin':'*',
+            success: function(responseData, textStatus, jqXHR) {
+                alert("data saved")
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.log(errorThrown);
+            }
+        })
+    </script>  
 </body>
 
 </html>
